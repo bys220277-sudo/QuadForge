@@ -1,0 +1,28 @@
+schema_version = "1.0.0"
+
+id = "quadforge"
+name = "QuadForge — Auto Retopology"
+version = "1.0.2"
+tagline = "Автоматическая ретопология в чистые квады"
+maintainer = "QuadForge Project"
+type = "add-on"
+
+blender_version_min = "4.2.0"
+
+# Нативное ядро собрано под Windows x64
+platforms = ["windows-x64"]
+
+license = ["SPDX:GPL-3.0-or-later"]
+tags = ["Mesh", "Modeling"]
+
+[permissions]
+files = "Загрузка встроенного нативного ядра из папки аддона"
+
+[build]
+paths_exclude_pattern = [
+  "__pycache__/",
+  "*.pyc",
+  "/native/build/",
+  "/native/tests/",
+  "/lib/linux-x64/",
+]
